@@ -166,7 +166,7 @@ button.full {width:100%;}
     .header .attend .attend-point {background-image:url(../img/icon_point_m.svg)}
     .header .attend .attend-point strong  {font-size:14px;}
     .header .btn-attend {padding-right:25px; background-image:url(../img/btn_attend_m.svg); background-size: 18px 16px;}
-    .side-nav {top:0; right:0; bottom:56px; position:fixed; z-index:20;}
+    .side-nav {top:0; right:0; bottom:56px; position:fixed;}
     .side-nav ul {position:absolute; padding:0 40px; width:100%; top:64px; left:0; bottom:0px; overflow:auto;}
     .side-nav ul::-webkit-scrollbar { display: none; }
     .btn-side-closed {position:absolute; top:19px; right:20px; width:24px; height:24px; background: url(../img/btn_side_closed.svg) no-repeat; background-size: contain;}
