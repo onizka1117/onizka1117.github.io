@@ -10,11 +10,13 @@
 <script type="text/javascript" src="js/common.js"></script>
 <script>
 $(document).ready(function(){
-    
+    $(".btn-more-arr").on("click", function(){
+        $(this).parent().toggleClass("close");
+    });
 }); 
 </script>     
 </head>
-<body>
+<body> 
 
  
 <div class="main-wrap wrap">
@@ -85,6 +87,7 @@ $(document).ready(function(){
         <div class="inner">    
             
             <div class="flex-box input-group esimate-item">
+                <button class="btn-more-arr" type="button" aria-label="더보기"></button>
                 <div class="col1 flex-box">
                     <div>
                         <label class="fc-primary">고객명</label>
