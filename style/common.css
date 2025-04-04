@@ -470,7 +470,7 @@ button.full {width:100%;}
     .estimate-list .td-customer {font-size:16px; font-weight:500; color:#000;}
     .estimate-list .td-tel {font-size:12px; font-weight:400; color:#9D9C9D;}
     .estimate-list .td-total {font-size:20px; font-weight:600; color:#000; position:absolute; top:20px; right:20px;}
-    .estimate-list .td-pdf {position:absolute; bottom:20px; left:20px; }
+    .estimate-list .td-pdf {position:absolute; bottom:16px; left:20px; }
     .estimate-list .td-pdf .btn-pdf {margin:0; width:auto; padding:0 30px 0 0; background-position:center right; font-size:14px; color:#9D9C9D;}
     .estimate-list .td-date,
     .estimate-list .td-state {font-size:14px;  color:#9D9C9D; position:absolute; bottom:20px; right:20px;}
