@@ -517,10 +517,7 @@ button.full {width:100%;}
 .sample-detail .txt > strong {display:block; font-size:20px; font-weight:600;}
 .sample-detail .txt > p {font-size:16px; font-weight:300; margin-top:10px;}
 
-
-
-
-.full-popup {position:fixed; padding:61px 20px 20px 20px; display:flex; align-items:center; top:0; left:0; height:100%; width:100%; background-color: rgba(40, 40, 40, 0.9); z-index:500;}
+.full-popup {position:fixed; padding:61px 20px 20px 20px; display:flex; display:none; align-items:center; top:0; left:0; height:100%; width:100%; background-color: rgba(40, 40, 40, 0.9); z-index:500;}
 .btn-full-popup-close {width:30px; height:30px; vertical-align:middle; background: url(../img/btn_full_popup_close.svg) no-repeat; background-size: contain; position:absolute; top:29px; right:20px;}
 .full-popup .pop-con {flex:1; height:100%; overflow:auto; }
 .full-popup .pop-con::-webkit-scrollbar { width: 5px; height:5px; }
