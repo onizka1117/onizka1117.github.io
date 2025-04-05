@@ -550,7 +550,7 @@ span.btn-upload {display:inline-block;}
 .search-detail > .inner {max-width: 1256px; padding:24px 20px 30px; margin:0 auto;}
 .search-detail h3 {text-align:center; font-size:24px; color:#fff; font-weight:600; line-height:40px; margin-bottom:14px;}
 .btn_search_close {width:30px; height:30px; vertical-align:middle; background: url(../img/btn_search_close.svg) no-repeat; background-size: contain; position:absolute; top:29px; right:20px;}
-.sample-search-detail .input-group.flex-box > div {flex-basis:12.5%; flex-shrink:0; flex-grow: inherit;}
+.sample-search-detail .input-group.flex-box > div {flex-basis:12%; flex-shrink:0; flex-grow: inherit;}
 .sample-search-detail .input-group.flex-box > div.col-etc {flex:1;}
 .sample-search-detail .input-group.flex-box .select {width:100%;}
 .btn-detail-search {width:30px; margin-right:19px; height:30px; font-size:0px; flex-shrink:0; align-self: center; vertical-align:middle; background: url(../img/btn_detail_search.svg) no-repeat; background-size: contain;}
