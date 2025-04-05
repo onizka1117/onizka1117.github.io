@@ -12,6 +12,7 @@ $(document).ready(function(){
     $(".btn-side-closed").on("click", function(){
         $(".side-nav").fadeOut();
     });
+
 });
 
 $(window).resize(function(){
