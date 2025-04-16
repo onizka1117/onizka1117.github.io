@@ -656,3 +656,82 @@ span.btn-upload {display:inline-block;}
 .select-custom ul > li {padding:3px 9px;}
 .select-custom ul > li+li {border-top:1px solid #D7EAFF;}
 .select-custom ul > li button {font-size:16px; height:40px; width:100%; text-align:left;}
+
+.check-swich {display:inline-block; padding:0 12px; position:relative;}
+.check-swich label {display:inline-block; cursor:pointer;}
+.check-swich label input {position:absolute; top:0; left:0; opacity:0; }
+.check-swich label .lbl {margin-left:12px; font-size:16px; font-weight: 300; line-height:40px; color:#9D9C9D;}
+.check-swich .check-icon {display:inline-block; width:34px; height:14px; background-color:#9E9E9E; border-radius:7px; position:relative;}
+.check-swich .check-icon .circle {position:absolute; top:-12px; left:-12px; transition: left 0.3s; display:inline-block; background-color: rgba(0, 0, 0, 0.04); width:38px; height:38px; border-radius: 50%;}
+.check-swich .check-icon .circle::before {content:''; position: absolute;  top: 50%; left: 50%;  transform: translate(-50%, -50%); display:inline-block; width:20px; height:20px; border-radius: 50%; background-color: #fff; box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);}
+.check-swich label input:checked + .check-icon {background-color:#8BBAE8;}
+.check-swich label input:checked + .check-icon .circle {left:8px;}
+.check-swich label input:checked + .check-icon .circle::before {background-color:#1976D2;}
+
+
+
+
+/* 거래처 */
+.client-list {margin-top:20px;}
+.flex-client-detail {display:flex; flex-wrap:wrap; gap:10px;} 
+.flex-client-detail > .input-group {flex-basis:calc(25% - 8px); }
+.flex-client-detail > .input-group input[type=text] {width:100%;}
+
+.company-form.type-client {padding:0; background-color: transparent;}
+.company-form .input-group {background-color:#FCFCFC;}
+.company-form .input-group input[type=text],
+.company-form .input-group .select {background-color:transparent;}
+
+.client-menu {margin-top:10px;}
+.client-menu-list {display:flex; flex-wrap: wrap; width:100%; padding:12px 0 20px;}
+.client-menu-list > li {flex:0 0 20%;}
+
+.btn-more-arr-full {width:calc(100% + 40px); height:26px; color:#fff; font-size:16px; margin:0 -20px; border-radius: 0 0 4px 4px; background:#1976D2 url(../img/btn_more_arr_close.svg) no-repeat center right 6px; background-size:17px auto;}
+
+.client-add-wrap {gap:18px; margin-top:12px; }
+.client-add-wrap .left {flex:0 0 185px;}
+.client-add-wrap .right {flex:1; border:1px solid #C4C4C4; height:479px; border-radius: 4px;}
+
+.multiple-select {padding:21px; border:1px solid #C4C4C4; border-radius: 4px; height:419px; display:flex;  flex-direction: column;}
+.multiple-select label {display:flex; align-items: center;  font-size:16px; font-weight:300; position:relative; color:#000; flex:1;}
+.multiple-select label input {position:absolute; top:0; left:0; opacity: 0;}
+.multiple-select label input:checked + .lbl {font-weight:700;}
+.client-add-wrap .btns {margin-top:6px;}
+.client-add-wrap .btns .btn-mid {flex:1;}
+
+@media (max-width:1023px){
+    .p-hide {display:initial;}
+    .client-list {display:block; margin:20px -20px 0;}
+    .client-list colgroup,
+    .client-list thead {display:none;}
+    .client-list tbody,
+    .client-list tbody > tr {display:block;}
+    .client-list tbody > tr:nth-child(even) {background-color:#F6F5F5;}
+    .client-list tbody > tr td {display:inline-block; height:auto; border:0; padding:0;}
+    .client-list tbody > tr {border-bottom:1px solid #D9D9D9; height:90px;  padding:20px; position:relative; box-sizing: border-box;}
+    .client-list .td-col1 {font-size:16px; font-weight:500; color:#000;}
+    .client-list .td-col2 {font-size:20px; font-weight:100; color:#000; position:absolute; top:20px; right:20px;}
+    .client-list .td-col3 {font-size:14px; font-weight:300; color:#8E8D8D; position:absolute; bottom:20px; left:20px;}
+    .client-list .td-col4 {font-size:12px; font-weight:400; color:#9D9C9D;}
+    .client-list .td-col7 {position:absolute; bottom:16px; right:20px; }
+    .client-list .td-col7 .btn-remove {width:20px; height:20px;}
+
+    .flex-client-detail {display:block;}
+    .flex-client-detail > .input-group + .input-group {margin-top:12px;} 
+    .company-form.type-client {margin-top:10px; padding:0 20px; background-color:#F1F7FF;}
+    .company-form .input-group {background-color: transparent; margin-top:10px;}
+    .company-form.type-client > .btn {margin-top:12px; border-radius:4px 4px 0 0;}
+    .company-form.type-client.close .input-group,
+    .company-form.type-client.close > .btn {display: none;}
+
+    .client-menu {border:0; }
+    .client-menu > label {font-size: 20px; font-weight: 400; margin-bottom: 10px; color: #000;}
+    .client-menu-list > li {flex:0 0 50%;}
+    .client-menu-list .check-swich {padding:0;}
+    .client-add-wrap {flex-direction: column-reverse; gap:10px; margin-bottom:20px;}
+    .client-add-wrap .left {flex-basis:auto;}
+    .client-add-wrap .right {flex:0 0 247px;}
+    .client-add-wrap .btns {gap:10px;}
+    .client-add-wrap .btns > * {flex:1;}
+}
+
