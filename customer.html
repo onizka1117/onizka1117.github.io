@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>주식회사제라가족 예쁜창</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+<link rel="stylesheet" href="style/common.css">
+<script type="text/javascript" src="js/jquery-3.7.1.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script>
+$(document).ready(function(){
+    $(".btn-more-arr-full").on("click", function(){
+        $(this).parent().toggleClass("close");
+    });
+}); 
+</script>     
+</head>
+<body> 
+
+ 
+<div class="main-wrap wrap">
+
+    <div class="header">
+        <div class="inner">
+            <div class="header-top"> 
+                <button class="btn-back" aria-label="뒤로"><span>1</span></button>
+                <h1 class="title">고객관리</h1>
+                <button class="btn-menu" aria-label="메뉴"></button>
+            </div>
+
+            <div class="side-nav">
+                <button class="btn-side-closed" aria-label="닫기"></button>
+                <h2>Menu List</h2>
+                <ul class="side-menu">
+                    <li>
+                        <a href="#" class="m01">3D카다록</a>
+                    </li>
+                    <li>
+                        <a href="#" class="m02">견적서</a>
+                    </li>
+                    <li>
+                        <a href="#" class="m03">키오스크</a>
+                    </li>
+                    <li>
+                        <a href="#" class="m04">갤러리</a>
+                    </li>
+                    <li>
+                        <a href="#" class="m05">스케쥴</a>
+                    </li>
+                    <li>
+                        <a href="#" class="m06">발주</a>
+                    </li>
+                    <li>
+                        <a href="#" class="m07">고객관리</a>
+                    </li>
+                    <li>
+                        <a href="#" class="m08">미수</a>
+                    </li>
+                    <li>
+                        <a href="#" class="m09">미지급</a>
+                    </li> 
+                    <li>
+                        <a href="#" class="m10">매입원장</a>
+                    </li>
+                    <li>
+                        <a href="#" class="m11">매출원장</a>
+                    </li>
+                    <li>
+                        <a href="#" class="m12">단가관리</a>
+                    </li>
+                    <li>
+                        <a href="#" class="company">본사정보</a>
+                    </li>
+                    <li>
+                        <a href="#" class="logout">로그아웃</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="container">
+
+        <div class="inner">    
+            
+            <div class="search-box p-bg bd-gray">
+                <input type="text" />
+                <button type="button" class="btn-search" aria-label="검색"></button>
+            </div>
+
+            <div class="flex-box customer-form">
+                <button type="button" class="btn-more-arr-full p-hide">고객 정보</button>
+                <div class="customer-list">
+                    <div class="flex-box input-group">
+                        <div class="col1">
+                            <label class="fc-primary">고객명</label>
+                            <input type="text" value="박정훈 사모님" />
+                        </div>
+                        <div class="col2">
+                            <label>연락처</label>
+                            <input type="text" value="010-6381-2233" />
+                        </div>
+                        <div class="col3">
+                            <label>생일</label>
+                            <div class="flex-box">
+                                <input type="text" value="04-04" />
+                                <select class="select">
+                                    <option>(양)</option>
+                                    <option>(음)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col4">
+                            <label>이메일</label>
+                            <input type="text" value="admin@naver.com" />
+                        </div>
+                        <div class="col5">
+                            <label>시공주소</label>
+                            <input type="text" value="서울 강남 서초구 서로대로 34길  해밍턴빌딩" />
+                        </div>
+                        <div class="col6">
+                            <label>상세주소</label>
+                            <input type="text" value="3401호" />
+                        </div>
+                        <div class="col7">
+                            <label>비고</label>
+                            <input type="text" value="개조심" />
+                        </div>
+                    </div> 
+                </div>
+                <button class="btn btn-mid">고객 +</button>
+            </div>
+            
+
+
+
+           
+
+            <div class="tbl-wrap customer-tbl">
+                <table>
+                    <colgroup>
+                        <col style="width:160px;" />
+                        <col style="width:160px;" />
+                        <col style="width:120px;" />
+                        <col style="width:180px;" />
+                        <col style="width:375px;" />
+                        <col style="width:auto;" />
+                        <col style="width:60px;" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="text-left">고객명 <button type="button" class="btn-sort" aria-label="정렬"></button></th>
+                            <th class="text-left">연락처 <button type="button" class="btn-sort" aria-label="정렬"></button></th>
+                            <th class="text-left">생일 <button type="button" class="btn-sort" aria-label="정렬"></button></th>
+                            <th class="text-left">이메일일 <button type="button" class="btn-sort" aria-label="정렬"></button></th>
+                            <th class="text-left">주소 <button type="button" class="btn-sort" aria-label="정렬"></button></th>
+                            <th class="text-left">비고</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="td-col1">박정훈 사모님</td> 
+                            <td class="td-col3">010-6381-2233</td>
+                            <td class="td-col2">07-08<span class="m-hide">(양)</span></td>
+                            <td class="td-col4">admin@naver.com</td>
+                            <td class="td-col5 m-hide">서울시 서초구 도산대로 12-152길 해밍턴빌딩 304호</td>
+                            <td class="td-col6 m-hide">^^</td>
+                            <td class="td-col7 text-center"><button type="button" class="btn-remove" aria-label="삭제"></button></td>
+                        </tr>
+                        <tr>
+                            <td class="td-col1">김정일 대표님</td> 
+                            <td class="td-col3">010-6381-2233</td>
+                            <td class="td-col2">07-08<span class="m-hide">(양)</span></td>
+                            <td class="td-col4">admin@naver.com</td>
+                            <td class="td-col5 m-hide">서울시 서초구 도산대로 12-152길 해밍턴빌딩 304호</td>
+                            <td class="td-col6 m-hide">^^</td>
+                            <td class="td-col7 text-center"><button type="button" class="btn-remove" aria-label="삭제"></button></td>
+                        </tr>
+                        <tr>
+                            <td class="td-col1">김세인 선생님</td> 
+                            <td class="td-col3">010-6381-2233</td>
+                            <td class="td-col2">07-08<span class="m-hide">(양)</span></td>
+                            <td class="td-col4">admin@naver.com</td>
+                            <td class="td-col5 m-hide">서울시 서초구 도산대로 12-152길 해밍턴빌딩 304호</td>
+                            <td class="td-col6 m-hide">^^</td>
+                            <td class="td-col7 text-center"><button type="button" class="btn-remove" aria-label="삭제"></button></td>
+                        </tr>
+                        <tr>
+                            <td class="td-col1">주기성 교장선생님</td> 
+                            <td class="td-col3">010-6381-2233</td>
+                            <td class="td-col2">07-08<span class="m-hide">(양)</span></td>
+                            <td class="td-col4">admin@naver.com</td>
+                            <td class="td-col5 m-hide">서울시 서초구 도산대로 12-152길 해밍턴빌딩 304호</td>
+                            <td class="td-col6 m-hide">^^</td>
+                            <td class="td-col7 text-center"><button type="button" class="btn-remove" aria-label="삭제"></button></td>
+                        </tr>
+                        <tr>
+                            <td class="td-col1">주식회사가안</td> 
+                            <td class="td-col3">010-6381-2233</td>
+                            <td class="td-col2">07-08<span class="m-hide">(양)</span></td>
+                            <td class="td-col4">admin@naver.com</td>
+                            <td class="td-col5 m-hide">서울시 서초구 도산대로 12-152길 해밍턴빌딩 304호</td>
+                            <td class="td-col6 m-hide">^^</td>
+                            <td class="td-col7 text-center"><button type="button" class="btn-remove" aria-label="삭제"></button></td>
+                        </tr>
+                        <tr>
+                            <td class="td-col1">주식회사가안</td> 
+                            <td class="td-col3">010-6381-2233</td>
+                            <td class="td-col2">07-08<span class="m-hide">(양)</span></td>
+                            <td class="td-col4">admin@naver.com</td>
+                            <td class="td-col5 m-hide">서울시 서초구 도산대로 12-152길 해밍턴빌딩 304호</td>
+                            <td class="td-col6 m-hide">^^</td>
+                            <td class="td-col7 text-center"><button type="button" class="btn-remove" aria-label="삭제"></button></td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="paging">
+                 <span class="page">
+                    page:
+                    <select>
+                        <option>10</option>
+                        <option>12</option>
+                        <option>13</option>
+                    </select>
+                 </span>
+
+                 <span class="current-page">
+                    <span>10</span> of <span>13</span>
+                 </span>
+
+                 <span class="page-btns">
+                    <button type="button" class="btn-prev" aria-label="이전"></button>
+                    <button type="button" class="btn-next" aria-label="다음"></button>
+                 </span>
+            </div>
+            
+            
+        </div>
+ 
+    </div>
+
+ 
+    <div class="footer">
+        <span>Contact US</span>
+        <span class="mail">inkopark1@naver.com</span>
+    </div>
+
+    <div class="m-footer">
+        <a href="#" class="nav-f01">Home</a>
+        <a href="#" class="nav-f02">3D</a>
+        <a href="#" class="nav-f03">견적서</a>
+    </div>
+
+</div>
+  
+
+
+</body>
+</html> 
