@@ -690,7 +690,7 @@ span.btn-upload {display:inline-block;}
 .client-menu-list > li {flex:0 0 20%;}
 
 .btn-more-arr-full {width:calc(100% + 40px); height:26px; color:#fff; font-size:16px; margin:0 -20px; border-radius: 0 0 4px 4px; background:#1976D2 url(../img/btn_more_arr_close.svg) no-repeat center right 6px; background-size:17px auto;}
-
+.close > .btn-more-arr-full {background-image:url(../img/btn_more_arr_close2.svg)}
 .client-add-wrap {gap:18px; margin-top:12px; }
 .client-add-wrap .left {flex:0 0 185px;}
 .client-add-wrap .right {flex:1; border:1px solid #C4C4C4; height:479px; border-radius: 4px;}
@@ -782,3 +782,44 @@ span.btn-upload {display:inline-block;}
     .customer-tbl .td-col7 .btn-remove {width:20px; height:20px;}
     
 }
+
+/* 사원 */
+.employee-list {margin-top:20px;}
+
+.regiEmployee {gap:30px;}
+.regiEmployee > div {flex:1; padding:25px; border:1px solid #D9D9D9; border-radius:4px;}
+.regiEmployee > .left .input-group + .input-group {margin-top:20px;}
+.regiEmployee > .right {padding:30px 40px;}
+.employee-check-list > li + li {margin-top:22px;}
+.employee-check-list .check-swich label .lbl {color:#000; font-weight:300;}
+.regiEmployee .input-group input[type=text] {width:100%;}
+@media (max-width:1023px){
+    .employee-list {display:block; margin:20px -20px 0;}
+    .employee-list colgroup,
+    .employee-list thead {display:none;}
+    .employee-list tbody,
+    .employee-list tbody > tr {display:block;}
+    .employee-list tbody > tr:nth-child(even) {background-color:#F6F5F5;}
+    .employee-list tbody > tr td {display:inline-block; height:auto; border:0; padding:0;}
+    .employee-list tbody > tr {border-bottom:1px solid #D9D9D9; height:90px;  padding:20px; position:relative; box-sizing: border-box;}
+    .employee-list .td-col2 {font-size:16px; font-weight:500; color:#000;}
+    .employee-list .td-col3 {font-size:16px; font-weight:500; color:#000;}
+    .employee-list .td-col5 {font-size:20px; font-weight:100; color:#000; position:absolute; top:20px; right:20px;}
+    .employee-list .td-col6 {font-size:14px; font-weight:300; color:#8E8D8D; position:absolute; bottom:20px; left:20px;}
+    .employee-list .td-col4 {font-size:12px; font-weight:400; color:#9D9C9D;}
+    .employee-list .td-col8 {position:absolute; bottom:16px; right:20px; }
+    .employee-list .td-col8 .btn-remove {width:20px; height:20px;}
+
+    .regiEmployee {display:block;}
+    .regiEmployee > .left {border:0; border-radius: 0; padding:0 20px 13px;  margin:-23px -20px 0; background-color:#F1F7FF;}
+    .regiEmployee > .left .input-group + .input-group {margin-top:10px;}
+    .regiEmployee > .left .input-group {border-color:#C2E1FF;}
+    .regiEmployee > .left .btn-more-arr-full {margin:0 auto 4px; width:100%;}
+    .regiEmployee > .left.close .input-group:not(.first) {display:none;}
+    .regiEmployee > .right {border:0; border-radius: 0; padding-top:0;  margin:0 -20px; background-color:#F7FFF1;}
+    .regiEmployee > .right .tit {display:block; margin:0 -20px 20px; height:26px; text-align: center; color:#fff; font-size:12px; line-height:26px; font-weight:300; border-radius:0 0 10px 10px; background-color:#6FA174;}
+    .employee-check-list > li + li {margin-top:2px;}
+
+
+}
+
