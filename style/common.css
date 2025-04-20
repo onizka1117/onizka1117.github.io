@@ -823,3 +823,62 @@ span.btn-upload {display:inline-block;}
 
 }
 
+/* 일정표 */
+.schedule-search {}
+.schedule-search .select {flex:0 0 180px; padding-left:22px; border:0; font-size:30px; color:#504E4E; font-weight:600;}
+
+.fc .fc-col-header-cell {border:0;}
+.fc .fc-scrollgrid {border:0;}  
+.fc-theme-standard td, .fc-theme-standard th {border-color:#DCE2EB;}
+.fc .fc-daygrid-body {border-top:1px solid #DCE2EB; border-left:1px solid #DCE2EB;}
+.fc .fc-scrollgrid-section-header th {border:0;}
+.fc-scrollgrid-sync-inner {text-align:right;padding:14px 10px  10px;}
+.fc-col-header-cell-cushion {font-size:20px; font-weight:300; }
+.fc-col-header-cell.fc-day-sat {color:#1976D2;}
+.fc-col-header-cell.fc-day-sun {color:#FF5E54;}
+.fc .fc-non-business {background-color: transparent;}
+.fc .fc-daygrid-day {position:relative; height:150px;}
+
+
+.custom-box {position:absolute; bottom:0; left:0; width:100px;}
+.custom-box > div {display:flex; cursor: pointer; align-items: center; width:100%; height:28px; color:#fff; font-size:14px; padding:3px 9px; justify-content: space-between;}
+.custom-box > div em {font-weight:500; font-size:14px; font-style: normal;}
+.event-type1 {background-color:#C28E5F;}
+.event-type2 {background-color:#4199F0;}
+.event-type3 {background-color:#FF9A94;}
+.event-type4 {background-color:#54CC62;}
+.event-type5 {background-color:#878686;}
+
+@media (max-width:1023px){
+    .fc {margin:0 -20px;}
+    .fc-theme-standard td, .fc-theme-standard th {border-color:#C4C4C4;}
+    .fc .fc-daygrid-body {border-top:1px solid #C4C4C4; border-left:0; border-right:0 !important;}
+    .fc-scrollgrid-sync-inner {text-align:right;padding:5px;text-align:center; }
+    .fc-col-header-cell-cushion {font-size:13px; text-align:left; }
+    .fc-daygrid-day-top {justify-content: center;}
+    .fc-daygrid-day-number {font-size:14px;}
+    td.fc-daygrid-day {border-left:0; border-right: 0; }
+    .fc-scrollgrid-section-body > td {border-right:0;}
+    .fc-daygrid-day {height:120px;}
+
+    .custom-box {bottom:auto; top:28px; width:100%;}
+    .custom-box > div {height:21px; font-size:12px;padding:3px 2px;}
+    .custom-box > div em {font-size:12px;}
+
+    .schedule-search {gap:10px; align-items: center;}
+    .schedule-search .select {flex-basis: 103px; font-size:20px; padding-left:0;}
+}
+
+
+
+/* 견적서 */
+.estimate-popup {padding:16px 20px 24px; overflow:auto; position:fixed; z-index:999; width:100%; height:100%; min-height:400px; top:0; left:0; background: url(../img/bg-estimate.svg) no-repeat center center; background-size:cover;}
+.estimate-popup > .inner {text-align:center;}
+.estimate-item-wrap {display:inline-block; position:relative;}
+.estimate-item-wrap .title {position:absolute; padding-top:10px; padding-right:36px; text-align: right; justify-content: end; top:14px; right:-20px; color:#fff; text-align:right; font-size:14px; height:43px; width:336px; background: url(../img/bg-estimate-tit.svg) no-repeat; background-size: auto 100%;;}
+.estimate-item-wrap .title {width:min(336px,56.5vw); height:min(43px, 7.74vw); font-size:min(14px, 2.52vw); padding-top:min(10px, 1.8vw); top:min(14px, 2vw); }
+.estimate-popup .estimate-item {max-width:100%; }
+.estimate-popup .btn-wrap {position:fixed; bottom:0; display:flex; justify-content: center; width:100%; left:0; z-index:100;}
+.estimate-popup .btn-wrap button {border-radius:10px 0 0 0; width:146px; border:1px solid #6C9BB5;}
+.estimate-popup .btn-wrap .type-gray {background-color:#9D9C9D; }
+.estimate-popup .btn-wrap button + button {border-radius:0 10px 0 0;}

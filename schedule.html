@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>주식회사제라가족 예쁜창</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+<link rel="stylesheet" href="style/common.css">
+<script type="text/javascript" src="js/jquery-3.7.1.js"></script>
+<script type="text/javascript" src="js/index.global.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+  
+</head>
+<body> 
+
+ 
+<div class="main-wrap wrap">
+
+    <div class="header">
+        <div class="inner">
+            <div class="header-top"> 
+                <button class="btn-back" aria-label="뒤로"><span>1</span></button>
+                <h1 class="title">일정표</h1>
+                <button class="btn-menu" aria-label="메뉴"></button>
+            </div>
+
+            <div class="side-nav">
+                <button class="btn-side-closed" aria-label="닫기"></button>
+                <h2>Menu List</h2>
+                <ul class="side-menu">
+                    <li>
+                        <a href="#" class="m01">3D카다록</a>
+                    </li>
+                    <li>
+                        <a href="#" class="m02">견적서</a>
+                    </li>
+                    <li>
+                        <a href="#" class="m03">키오스크</a>
+                    </li>
+                    <li>
+                        <a href="#" class="m04">갤러리</a>
+                    </li>
+                    <li>
+                        <a href="#" class="m05">스케쥴</a>
+                    </li>
+                    <li>
+                        <a href="#" class="m06">발주</a>
+                    </li>
+                    <li>
+                        <a href="#" class="m07">고객관리</a>
+                    </li>
+                    <li>
+                        <a href="#" class="m08">미수</a>
+                    </li>
+                    <li>
+                        <a href="#" class="m09">미지급</a>
+                    </li> 
+                    <li>
+                        <a href="#" class="m10">매입원장</a>
+                    </li>
+                    <li>
+                        <a href="#" class="m11">매출원장</a>
+                    </li>
+                    <li>
+                        <a href="#" class="m12">단가관리</a>
+                    </li>
+                    <li>
+                        <a href="#" class="company">본사정보</a>
+                    </li>
+                    <li>
+                        <a href="#" class="logout">로그아웃</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="container">
+
+        <div class="inner">    
+            
+            <div class="flex-box schedule-search">
+                <div class="search-box p-bg bd-gray">
+                    <input type="text" />
+                    <button type="button" class="btn-search" aria-label="검색"></button>
+                </div>
+                <select class="select" onchange="goDate(this.value)">
+                    <option value="2025-04-01">2025.04</option>
+                    <option value="2025-05-01">2025.05</option>
+                    <option value="2025-06-01">2025.06</option>
+                    <option value="2025-07-01">2025.07</option>
+                    <option value="2025-08-01">2025.08</option>
+                    <option value="2025-09-01">2025.09</option>
+                </select>
+            </div>
+
+           
+
+            <div id='calendar'></div>
+
+           
+
+            
+            
+           
+            
+            
+        </div>
+ 
+    </div>
+
+ 
+    <div class="footer">
+        <span>Contact US</span>
+        <span class="mail">inkopark1@naver.com</span>
+    </div>
+
+    <div class="m-footer">
+        <a href="#" class="nav-f01">Home</a>
+        <a href="#" class="nav-f02">3D</a>
+        <a href="#" class="nav-f03">견적서</a>
+    </div>
+
+</div>
+  
+
+<script>
+
+const getEventTagHtml = function(eventType, num){ //type1 시공 |  type2 배송 | type3 실측 | type4 미팅 | type5 기타
+    const newDiv = document.createElement('div');
+    if(eventType === "시공") {
+        newDiv.className = "event-type1";
+        newDiv.innerHTML = "<span>시공</span><em>"+num+"</em>";
+    }else if (eventType === "배송") {
+        newDiv.className = "event-type2";
+        newDiv.innerHTML = "<span>배송</span><em>"+num+"</em>";
+    }else if (eventType === "실측") {
+        newDiv.className = "event-type3";
+        newDiv.innerHTML = "<span>실측</span><em>"+num+"</em>";
+    }else if (eventType === "미팅") {
+        newDiv.className = "event-type4";
+        newDiv.innerHTML = "<span>미팅</span><em>"+num+"</em>";
+    }else {
+        newDiv.className = "event-type5";
+        newDiv.innerHTML = "<span>기타</span><em>"+num+"</em>";
+    }
+    return newDiv;
+}
+
+var calendarEl = document.getElementById('calendar');
+var calendar = new FullCalendar.Calendar(calendarEl, {
+    locale: 'ko', // 한글 설정
+    firstDay: 1,
+    headerToolbar: false,
+    editable: true,
+    height: 'auto',
+    dayMaxEvents: false, // allow "more" link when too many events
+    // 날짜 셀에 숫자만 표시
+    dayCellContent: function (arg) {
+    return arg.date.getDate(); // 숫자만 반환
+},
+dateClick: function(info) {
+    console.log('클릭한 날짜: ' + info.dateStr);
+},
+events: [
+],
+dayCellDidMount: function(info) {
+    const dateStr = info.date.toLocaleDateString('ko-KR'); // 로컬 시간대 기준 날짜 문자열
+
+    if (dateStr === '2025. 4. 3.') { 
+        const customHtml = document.createElement('div');
+        customHtml.className = 'custom-box';        
+        customHtml.appendChild(getEventTagHtml("시공", 3));
+        info.el.appendChild(customHtml);
+    }
+    if (dateStr === '2025. 4. 5.') { 
+        const customHtml = document.createElement('div');
+        customHtml.className = 'custom-box';        
+        customHtml.appendChild(getEventTagHtml("배송", 11));
+        customHtml.appendChild(getEventTagHtml("시공", 3));
+        info.el.appendChild(customHtml);
+    }
+    if (dateStr === '2025. 4. 11.') { 
+        const customHtml = document.createElement('div');
+        customHtml.className = 'custom-box';        
+        customHtml.appendChild(getEventTagHtml("실측", 2));
+        customHtml.appendChild(getEventTagHtml("시공", 3));
+        info.el.appendChild(customHtml);
+    }
+    if (dateStr === '2025. 4. 21.') { 
+        const customHtml = document.createElement('div');
+        customHtml.className = 'custom-box';        
+        customHtml.appendChild(getEventTagHtml("미팅", 2));
+        customHtml.appendChild(getEventTagHtml("시공", 3));
+        info.el.appendChild(customHtml);
+    }
+    if (dateStr === '2025. 4. 26.') { 
+        const customHtml = document.createElement('div');
+        customHtml.className = 'custom-box';        
+        customHtml.appendChild(getEventTagHtml("기타", 5));
+        info.el.appendChild(customHtml);
+    }
+}
+
+});
+
+calendar.render();
+
+
+function goDate(month) {
+    calendar.gotoDate(month);
+}
+
+document.addEventListener('DOMContentLoaded', function() { 
+    
+});
+</script>   
+</body>
+</html> 
