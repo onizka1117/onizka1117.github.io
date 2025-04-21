@@ -86,52 +86,83 @@ $(document).ready(function(){
 
         <div class="inner">    
             
-            <div class="search-box p-bg bd-gray">
-                <input type="text" />
-                <button type="button" class="btn-search" aria-label="검색"></button>
-            </div>
-
-            <div class="flex-box customer-form">
-                <button type="button" class="btn-more-arr-full p-hide">고객 정보</button>
-                <div class="customer-list">
+            <div class="flex-box schedule-form">
+                <button type="button" class="btn-more-arr-full p-hide">일정 정보</button>
+                <div class="schedule-list">
                     <div class="flex-box input-group">
                         <div class="col1">
-                            <label class="fc-primary">고객명</label>
-                            <input type="text" value="박정훈 사모님" />
+                            <label class="fc-primary">종류</label>
+                            <div class="text select">시공</div>
+                            <div class="select-custom type2" >
+                                <ul>
+                                    <li>
+                                        <input type="text" style="width:74px;" />
+                                    </li>
+                                    <li>
+                                        <button type="button">시공</button>
+                                    </li>
+                                    <li>
+                                        <button type="button">배송</button>
+                                    </li>
+                                    <li>
+                                        <button type="button">실측</button>
+                                    </li>
+                                    <li>
+                                        <button type="button">미팅</button>
+                                    </li>
+                                    <li>
+                                        <button type="button">송금</button>
+                                    </li>
+                                    <li>
+                                        <button type="button">수금금</button>
+                                    </li>
+                                    <li>
+                                        <button type="button">예약약</button>
+                                    </li>
+                                    <li>
+                                        <button type="button">관청</button>
+                                    </li>
+                                    <li>
+                                        <button type="button">치료</button>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="col2">
-                            <label>연락처</label>
-                            <input type="text" value="010-6381-2233" />
+                            <label>대상</label>
+                            <input type="text" value="김정은 사모님댁" />
                         </div>
                         <div class="col3">
-                            <label>생일</label>
+                            <label>에정시간</label>
                             <div class="flex-box">
-                                <input type="text" value="04-04" />
+                                <input type="text" value="11 :" />
                                 <select class="select">
-                                    <option>(양)</option>
-                                    <option>(음)</option>
+                                    <option>정각</option>
+                                    <option>이전</option>
+                                    <option>즈음</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col4">
-                            <label>이메일</label>
-                            <input type="text" value="admin@naver.com" />
-                        </div>
-                        <div class="col5">
-                            <label>시공주소</label>
+                            <label>장소</label>
                             <input type="text" value="서울 강남 서초구 서로대로 34길  해밍턴빌딩" />
                         </div>
-                        <div class="col6">
-                            <label>상세주소</label>
-                            <input type="text" value="3401호" />
-                        </div>
-                        <div class="col7">
+                        <div class="col5">
                             <label>비고</label>
-                            <input type="text" value="개조심" />
+                            <input type="text" value="010-6381-2233" />
+                        </div>
+                        <div class="col6">
+                            <label>상태</label>
+                            <select class="select">
+                                <option>완료</option>
+                                <option>대기</option>
+                                <option>연기</option>
+                                <option>실패</option>
+                            </select>
                         </div>
                     </div> 
                 </div>
-                <button class="btn btn-mid">고객 +</button>
+                <button class="btn btn-mid">일정 +</button>
             </div>
             
 
@@ -139,15 +170,15 @@ $(document).ready(function(){
 
            
 
-            <div class="tbl-wrap customer-tbl">
+            <div class="tbl-wrap schecule-tbl">
                 <table>
                     <colgroup>
                         <col style="width:120px;" />
                         <col style="width:160px;" />
-                        <col style="width:120px;" />
-                        <col style="width:180px;" />
-                        <col style="width:375px;" />
+                        <col style="width:160px;" />
                         <col style="width:auto;" />
+                        <col style="width:180px;" />
+                        <col style="width:100px;" />
                         <col style="width:60px;" />
                     </colgroup>
                     <thead>
@@ -166,12 +197,66 @@ $(document).ready(function(){
                             <td class="td-col1">시공</td> 
                             <td class="td-col3">박정훈 사장님</td>
                             <td class="td-col2">11:00에</td>
-                            <td class="td-col4">강원도 원주시 시청로34길 이안APT 103동 1205호</td>
-                            <td class="td-col5 m-hide">010-6381-2233</td>
+                            <td class="td-col4 m-hide">강원도 원주시 시청로34길 이안APT 103동 1205호</td>
+                            <td class="td-col5">010-6381-2233</td>
                             <td class="td-col6 m-hide">완료</td>
                             <td class="td-col7 text-center"><button type="button" class="btn-remove" aria-label="삭제"></button></td>
                         </tr>
-                        
+                        <tr>
+                            <td class="td-col1">시공</td> 
+                            <td class="td-col3">박정훈 사장님</td>
+                            <td class="td-col2">11:00에</td>
+                            <td class="td-col4 m-hide">강원도 원주시 시청로34길 이안APT 103동 1205호</td>
+                            <td class="td-col5 ">010-6381-2233</td>
+                            <td class="td-col6 m-hide">완료</td>
+                            <td class="td-col7 text-center"><button type="button" class="btn-remove" aria-label="삭제"></button></td>
+                        </tr>
+                        <tr>
+                            <td class="td-col1">시공</td> 
+                            <td class="td-col3">박정훈 사장님</td>
+                            <td class="td-col2">11:00에</td>
+                            <td class="td-col4 m-hide">강원도 원주시 시청로34길 이안APT 103동 1205호</td>
+                            <td class="td-col5 ">010-6381-2233</td>
+                            <td class="td-col6 m-hide">완료</td>
+                            <td class="td-col7 text-center"><button type="button" class="btn-remove" aria-label="삭제"></button></td>
+                        </tr>
+                        <tr>
+                            <td class="td-col1">시공</td> 
+                            <td class="td-col3">박정훈 사장님</td>
+                            <td class="td-col2">11:00에</td>
+                            <td class="td-col4 m-hide">강원도 원주시 시청로34길 이안APT 103동 1205호</td>
+                            <td class="td-col5 ">010-6381-2233</td>
+                            <td class="td-col6 m-hide">완료</td>
+                            <td class="td-col7 text-center"><button type="button" class="btn-remove" aria-label="삭제"></button></td>
+                        </tr>
+                        <tr>
+                            <td class="td-col1">시공</td> 
+                            <td class="td-col3">박정훈 사장님</td>
+                            <td class="td-col2">11:00에</td>
+                            <td class="td-col4 m-hide">강원도 원주시 시청로34길 이안APT 103동 1205호</td>
+                            <td class="td-col5 ">010-6381-2233</td>
+                            <td class="td-col6 m-hide">완료</td>
+                            <td class="td-col7 text-center"><button type="button" class="btn-remove" aria-label="삭제"></button></td>
+                        </tr>
+                        <tr>
+                            <td class="td-col1">시공</td> 
+                            <td class="td-col3">박정훈 사장님</td>
+                            <td class="td-col2">11:00에</td>
+                            <td class="td-col4 m-hide">강원도 원주시 시청로34길 이안APT 103동 1205호</td>
+                            <td class="td-col5 ">010-6381-2233</td>
+                            <td class="td-col6 m-hide">완료</td>
+                            <td class="td-col7 text-center"><button type="button" class="btn-remove" aria-label="삭제"></button></td>
+                        </tr>
+                        <tr>
+                            <td class="td-col1">시공</td> 
+                            <td class="td-col3">박정훈 사장님</td>
+                            <td class="td-col2">11:00에</td>
+                            <td class="td-col4 m-hide">강원도 원주시 시청로34길 이안APT 103동 1205호</td>
+                            <td class="td-col5 ">010-6381-2233</td>
+                            <td class="td-col6 m-hide">완료</td>
+                            <td class="td-col7 text-center"><button type="button" class="btn-remove" aria-label="삭제"></button></td>
+                        </tr>
+                
                         
                     </tbody>
                 </table>
