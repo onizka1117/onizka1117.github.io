@@ -18,11 +18,11 @@ $(document).ready(function(){
     });
 
     $(".sample-list >li").on("click", function() {
-        $(".full-popup").fadeIn();
+        $(".full-popup").fadeIn().css('display', 'flex');
         $("body").css("overflow", "hidden");
     });
     $(".btn-full-popup-close").on("click", function(){
-        $(this).parent().fadeOut();
+        $(this).parent().parent().fadeOut();
         $("body").css("overflow", "");
     });
 
@@ -208,30 +208,30 @@ $(document).ready(function(){
 
     <!-- 팝업 -->
     <div class="full-popup">
-        <button class="btn-full-popup-close" aria-label="닫기"></button>
+        <div class="full-popup-header">
+            <button class="btn-full-popup-close" aria-label="닫기"></button>
+        </div>
         <div class="pop-con">
-            
-            <div class="sample-detail">
-                <img class="img" src="img/sample_detail01.png" alt="" />
-                <div class="flex-box text-wrap">
-                    <div class="txt">
-                        <strong>콤비 | 엘레강스 | 화이트 | 아파트 | 안방 | 신혼 | 럭셔리</strong>
-                        <p>오래된 커튼이 있었는데 콤비 브라인드 에레강스를 추천해 드렸고 매우 만족 하셨습니다.<br /> 덕분 맛있는 커피도 잘 먹었습니다. 제품관련 문의는 언제나 환영입니다.</p>
-                    </div>
-
-                    <div class="paging">
-                        <span class="current-page">
-                           <span>10</span> of <span>13</span>
-                        </span>
-       
-                        <span class="page-btns">
-                           <button type="button" class="btn-prev" aria-label="이전"></button>
-                           <button type="button" class="btn-next" aria-label="다음"></button>
-                        </span>
-                   </div>
+            <img class="img" src="img/sample_detail01.png" alt="" />
+        </div>
+        <div class="sample-detail">
+            <div class="flex-box text-wrap">
+                <div class="txt">
+                    <strong>콤비 | 엘레강스 | 화이트 | 아파트 | 안방 | 신혼 | 럭셔리</strong>
+                    <p class="ellipsis-2">오래된 커튼이 있었는데 콤비 브라인드 에레강스를 추천해 드렸고 매우 만족 하셨습니다.<br /> 덕분 맛있는 커피도 잘 먹었습니다. 제품관련 문의는 언제나 환영입니다.</p>
                 </div>
-            </div>
 
+                <div class="paging">
+                    <span class="current-page">
+                       <span>10</span> of <span>13</span>
+                    </span>
+   
+                    <span class="page-btns">
+                       <button type="button" class="btn-prev" aria-label="이전"></button>
+                       <button type="button" class="btn-next" aria-label="다음"></button>
+                    </span>
+               </div>
+            </div>
         </div>
     </div>
     <!-- //팝업 -->
