@@ -7,6 +7,7 @@
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
 <link rel="stylesheet" href="style/common.css">
 <script type="text/javascript" src="js/jquery-3.7.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pinch-zoom-js@2.3.4/dist/pinch-zoom.umd.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
 <script>
 $(document).ready(function(){
@@ -212,7 +213,12 @@ $(document).ready(function(){
             <button class="btn-full-popup-close" aria-label="닫기"></button>
         </div>
         <div class="pop-con">
-            <img class="img" src="img/sample_detail01.png" alt="" />
+            <pinch-zoom>
+                <img class="img" src="img/sample_detail01.png" alt="" />
+            </pinch-zoom>
+            <script>
+               // new PinchZoom(document.querySelector('pinch-zoom'));
+            </script>
         </div>
         <div class="sample-detail">
             <div class="flex-box text-wrap">
