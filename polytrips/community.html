@@ -44,6 +44,7 @@
     </div>
     <!-- //header -->
 
+
     <!-- visual -->
     <section class="sub-visual-wrap">
         <div class="inner">
@@ -925,7 +926,7 @@ document.querySelectorAll(".comm-item .btn-slide").forEach((el, index) => {
 
 
 $(document).ready(function(){
-   var headerHeight = $(".header").height();
+    var headerHeight = $(".header").height();
     var oldScrollTop = $(document).scrollTop();
 
 
@@ -947,7 +948,17 @@ $(document).ready(function(){
         oldScrollTop = scrollTop;
         
     } ); 
+
 }); 
+
+
+// 탭활성
+document.querySelectorAll(".comm-tabs li button").forEach((el, index)=> {
+    el.addEventListener("click", () => {
+        document.querySelector(".comm-tabs li button.on").classList.remove("on");
+        el.classList.add("on");
+    });
+});
 
     
 </script>
