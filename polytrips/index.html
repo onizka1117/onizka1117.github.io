@@ -1018,6 +1018,21 @@ $(document).ready(function(){
     } ); 
 }); 
 
+
+// 탭활성
+document.querySelectorAll(".search-tab button").forEach((el, index)=> {
+    el.addEventListener("click", () => {
+        document.querySelector(".search-tab button.on").classList.remove("on");
+        el.classList.add("on");
+    });
+});
+document.querySelectorAll(".recommend-tabs .tabs button").forEach((el, index)=> {
+    el.addEventListener("click", () => {
+        el.closest(".tabs").querySelector("button.on").classList.remove("on");
+        el.classList.add("on");
+    });
+});
+
     
 </script>
 </html>
