@@ -270,12 +270,12 @@ p {line-height:1.4;}
     .header .inner {align-items: center; justify-content: space-between; padding:0 30px;}
     .header .menu,
     .header .btn-area {display:none;}
-    .header .btn-menu {width:35px; height:22px;}
+    .header .btn-menu {width: 28px; height: 18px;}
     .header h1 {width:120px;}
 
 
     .main-visual {height:auto;}
-    .visual-slide-wrap {max-height:365px;}
+    .visual-slide-wrap {max-height:366px;}
     .visual-inner {flex-direction: column-reverse; align-items: flex-start; padding:0; }
     .visual-text {margin-left:0; padding:116px 40px;  height:365px;}
     .visual-text h2 {font-size:28px;}
