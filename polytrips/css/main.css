@@ -410,7 +410,7 @@ p {line-height:1.4;}
 .comm-item {border:1px solid #e3e3e3; border-radius:20px; overflow:hidden;}
 .comm-item .img-wrap {position:relative; height:360px; width: 100%; overflow: hidden;  display: flex ; align-items: center; justify-content: center;}
 .comm-item .img-wrap .img {min-height:100%; min-height:100%; object-fit: cover;}
-.comm-item .img-wrap .logo {position:absolute; z-index:0; top:50%; left:50%; transform: translateX(-50%) translateY(-50%);}
+.comm-item .img-wrap .logo {position:absolute; z-index:0; top:50%; left:50%; opacity: 0.7; transform: translateX(-50%) translateY(-50%);}
 .comm-item .ctg-wrap {padding:10px 30px; display:flex; align-items: center; justify-content: space-between;}
 .comm-item .ctg-wrap .txt {font-size:21px; color:#da6974; font-family: "S-CoreDream-8Heavy";}
 .comm-item dl {padding:0 30px; margin-bottom:24px; color:#303030;}
@@ -462,31 +462,49 @@ p {line-height:1.4;}
 
 
 @media (max-width: 767px) {
-    .sub-visual-wrap {height:300px;}
-    .sub-visual-wrap h2 {font-size:30px;}
-    .sub-visual-wrap p {font-size:14px;}
+    .sub-visual-wrap {height:238px;}
+    .sub-visual-wrap h2 {font-size:25px;}
+    .sub-visual-wrap p {font-size:12px;}
 
-    .community-article {padding: 100px 0;}
+    .community-article {padding: 60px 0;}
     .community-article .inner {padding:0 20px;}
+    .community-article .img-wrap {height:250px; display:flex; align-items: center; justify-items: center; overflow:hidden;}
+    .community-article .img-wrap img {object-fit: cover;}
     .community-article .text {margin-top:80px;}
-    .community-article .logo {width:150px;}
-    .community-article h3 {font-size:30px; margin-top:10px;}
-    .community-article .text {margin-top:50px; font-size:16px;}
+    .community-article .logo {width:116px;}
+    .community-article .text {margin-top:40px; font-size:13px;} 
+    .community-article h3 {font-size:27px; margin-top:10px; margin-bottom:30px;}
     
+    .community-list-wrap {padding:0;}
     .community-list-wrap .inner {padding:0 0;}
     .community-list .img-wrap {width:30%;}
-    .community-list li {gap:4%; padding:60px 20px 80px; position:relative;}
+    .community-list li {gap:4%; padding:40px 20px 70px; position:relative;}
     .community-list dl dt {font-size:18px; margin-bottom:10px;}
     .community-list dl dd.txt {font-size:14px;}
     .community-list dl dd.name {font-size:14px; margin-top:10px;}
     .community-list .btn-read-more {position:absolute; left:35%; bottom:30px; font-size: 12px; height: 30px;}
-
-
+    
+    .community-tab-wrap {padding:0 0 60px 0;}
     .community-tab-wrap .inner {padding:0 20px;}
-    .community-tab-wrap .tit-area .logo {width:150px;}
-    .community-tab-wrap .tit-area h3 {font-size:30px;}
-    .comm-item-list > li { width:100%;}
+    .community-tab-wrap .tit-area .logo {width:116px;}
+    .community-tab-wrap .tit-area h3 {font-size:22px;}
+    .comm-item-list {gap:40px; justify-content: center;}
+    .comm-item-list > li { width:100%; max-width:420px;}
     .comm-tabs {gap:10px; margin-top:40px;}
     .comm-tabs li button {font-size:12px; height:40px;}
     .comm-filter {margin-top:30px; padding:0 10px; height:46px; font-size:14px;}
+    .comm-tab-item {margin-top:35px;}
+    .comm-item .img-wrap {height:210px;}
+    .comm-item .ctg-wrap {padding:10px 15px;}
+    .comm-item .ctg-wrap .txt {font-size:16px;}
+    .check-fav {width:25px; height:25px;}
+    .comm-item dl {padding:0 15px;}
+    .comm-item dl dt {font-size:18px;}
+    .comm-item dl dd {margin-top:18px; font-size:12px; line-height:1.4;}
+    .comm-item .btns {height:82px; padding: 0 15px;}
+    .comm-item .btns button img {width:40px;}
+    .comm-item .btns .swiper-button-prev:after, 
+    .comm-item .btns .swiper-button-next:after {font-size:16px;}
+    .comm-item .btns .swiper-button-next {right:0;}
+    .comm-item .btns .swiper-button-prev {left:0;}
 }
