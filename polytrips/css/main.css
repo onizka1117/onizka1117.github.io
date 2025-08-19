@@ -8,6 +8,7 @@ div, li, ul, ol, a, span, p, dl, dt, dd {box-sizing:border-box; margin:0; paddin
 button {appearance: none; border:0; background-color: transparent; cursor: pointer;}
 h1, strong { font-family: "S-CoreDream-6Bold", sans-serif; }
 .inner {max-width:1640px; margin:0 auto; padding:0 20px;}
+p {line-height:1.4;}
 
 .header {position:fixed; padding-top:35px; height:150px; width:100%; z-index:100; top:0; left:0; color:#fff;}
 .header .inner {display:flex; align-items:flex-end;}
@@ -366,7 +367,7 @@ h1, strong { font-family: "S-CoreDream-6Bold", sans-serif; }
 
 .sub-visual-wrap {height:515px; background:url(../img/sub-visual.png) no-repeat center top/cover; background-color: #fff;}
 .sub-visual-wrap .inner {display:flex; flex-direction: column; height:100%; align-items: center; justify-content: center;}
-.sub-visual-wrap h2 {margin:50px 0 0 0;  font-family: "S-CoreDream-8Heavy"; font-size:57px; color:#fff; }
+.sub-visual-wrap h2 {margin:50px 0 0 0;  font-family: "S-CoreDream-8Heavy"; font-size:57px; color:#fff;  text-align:center;}
 .sub-visual-wrap h2 strong {color:#fed4c5;}
 .sub-visual-wrap p {font-size:26px; color:#fff; margin-top:10px;}
 
@@ -415,14 +416,16 @@ h1, strong { font-family: "S-CoreDream-6Bold", sans-serif; }
 .comm-item dl {padding:0 30px; margin-bottom:24px; color:#303030;}
 .comm-item dl dt {font-size:30px;font-family: "S-CoreDream-6Bold"; }
 .comm-item dl dd {font-size:18px; margin-top:30px; display: -webkit-box; -webkit-line-clamp: 4;  -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; word-break: break-word;}
-.comm-item .btns {position:relative; height:120px; padding:0 40px; background-color: #fc9197; color:#fff;}
+.comm-item .btns {position:relative; height:120px; padding:0 25px; background-color: #fc9197; color:#fff;}
 .comm-item .btns ul {align-items: center; height:100%; display: flex; justify-content: center; }
 .comm-item .btns ul li {display:flex; flex:1; min-width: 0; align-items: center;}
 .comm-item .btns button {width:100%; display:flex; font-size:11px; color:#fff; flex-direction: column; justify-content: center; align-items: center;}
 .comm-item .btns button img {width:100%; max-width:60px;}
-.comm-item .btns button span {text-wrap: nowrap;}
+.comm-item .btns button span {display:block; min-height:31px;}
 
 .comm-item .btns .btn-slide {height:100% ;overflow: hidden; position:relative;}
+.comm-item .btns .swiper-button-next {right:5px;}
+.comm-item .btns .swiper-button-prev {left:5px;}
 .comm-item .btns .swiper-button-next,
 .comm-item .btns .swiper-button-prev {color:#fff;}
 .comm-item .btns .swiper-button-prev:after,
@@ -467,7 +470,7 @@ h1, strong { font-family: "S-CoreDream-6Bold", sans-serif; }
     .community-article .inner {padding:0 20px;}
     .community-article .text {margin-top:80px;}
     .community-article .logo {width:150px;}
-    .community-article h3 {font-size:30px;}
+    .community-article h3 {font-size:30px; margin-top:10px;}
     .community-article .text {margin-top:50px; font-size:16px;}
     
     .community-list-wrap .inner {padding:0 0;}
@@ -483,7 +486,7 @@ h1, strong { font-family: "S-CoreDream-6Bold", sans-serif; }
     .community-tab-wrap .tit-area .logo {width:150px;}
     .community-tab-wrap .tit-area h3 {font-size:30px;}
     .comm-item-list > li { width:100%;}
-    .comm-tabs {gap:10px;}
+    .comm-tabs {gap:10px; margin-top:40px;}
     .comm-tabs li button {font-size:12px; height:40px;}
     .comm-filter {margin-top:30px; padding:0 10px; height:46px; font-size:14px;}
 }
