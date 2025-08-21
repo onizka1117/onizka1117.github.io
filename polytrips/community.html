@@ -34,6 +34,53 @@
                     <button type="button" class="btn-languge">Language</button><span>|</span>
                     <button type="button" class="btn-krw">KRW</button><span>|</span>
                     <button type="button">고객센터</button>
+                    <!-- 팝업 -->
+                    <div class="layer-popup" id="popLang">
+                        <h4>언어</h4>
+                        <ul >
+                            <li>
+                                <a href="javascript:void(0)" class="on">
+                                    <img src="https://www.polytrips.com/layouts/pc_tour/images/flag_en.png" class="img" />
+                                    English
+                                </a>  
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <img src="https://www.polytrips.com/layouts/pc_tour/images/flag_en.png" class="img" />
+                                    繁體中文
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <img src="https://www.polytrips.com/layouts/pc_tour/images/flag_en.png" class="img" />
+                                    English
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //팝업 -->
+                     <!-- 팝업 -->
+                    <div class="layer-popup type2"  id="popCurrency">
+                        <h4>통화</h4>
+                        <ul >
+                            <li>
+                                <a href="javascript:void(0)" class="on">
+                                    USD $
+                                </a>  
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    USD $
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    USD $
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //팝업 -->
                 </div>
                 <div class="btns-member">
                     <button type="button" class="btn-login">로그인</button>
@@ -901,6 +948,9 @@ const swiper = new Swiper('.swiper', {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 24,
+    autoplay: {
+        delay: 4000,
+    },
     breakpoints: {
         768: {
         slidesPerView: 2,
@@ -959,6 +1009,29 @@ document.querySelectorAll(".comm-tabs li button").forEach((el, index)=> {
         el.classList.add("on");
     });
 });
+
+document.querySelector(".btn-languge").addEventListener("click", () => {
+    const pop = document.querySelector("#popLang");
+    const pop2 = document.querySelector("#popCurrency");
+    if(pop.classList.contains("open")) {
+        pop.classList.remove("open");
+    }else {
+        pop2.classList.remove("open");
+        pop.classList.add("open");
+    }
+});
+
+document.querySelector(".btn-krw").addEventListener("click", () => {
+    const pop = document.querySelector("#popCurrency");
+    const pop2 = document.querySelector("#popLang");
+    if(pop.classList.contains("open")) {
+        pop.classList.remove("open");
+    }else {
+        pop2.classList.remove("open");
+        pop.classList.add("open");
+    }
+});
+
 
     
 </script>
