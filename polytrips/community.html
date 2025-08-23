@@ -865,6 +865,10 @@
                     </li>
                 </ul>
             </div>
+            <div class="comm-tab-item">2</div>
+            <div class="comm-tab-item">3</div>
+            <div class="comm-tab-item">4</div>
+            <div class="comm-tab-item">5</div>
         </div>
     </section>
 
@@ -1007,6 +1011,13 @@ document.querySelectorAll(".comm-tabs li button").forEach((el, index)=> {
     el.addEventListener("click", () => {
         document.querySelector(".comm-tabs li button.on").classList.remove("on");
         el.classList.add("on");
+        document.querySelectorAll(".community-tab-wrap .comm-tab-item").forEach((tabEl, i) => {
+            if(index ===  i) {
+                tabEl.style.display = "block";
+            }else {
+                tabEl.style.display = "none";
+            }
+        });
     });
 });
 
