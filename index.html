@@ -684,18 +684,168 @@
             </div>
         </div>
         
-
+        <div class="msg">
+            <p>팝업입니다.</p>
+            <div class="btns-row">
+                <button type="button" class="btn normal" onclick="openPopup('#popup1')">팝업1</button>
+                <button type="button" class="btn normal" onclick="openPopup('#popup2')">팝업2</button>
+            </div>
+        </div>
 
         <p class="time">오전 12:00</p>
     </div>
     <!-- //콘텐츠 확장 옵션 -->
 </section>
+
 <div class="send-box">
     <div class="send-group">
         <input type="text" placeholder="챗봇에게 물어보세요!" />
         <button type="button" class="btn icon-send" aria-label="보내기"></button>
     </div>
 </div>
+
+
+
+<!-- 팝업 -->
+<div class="popup-frame" id="popup1">
+    <div class="popup-wrap">
+        <div class="popup-header">
+            <button type="button" class="btn icon-close" aria-label="닫기" onclick="closePopup('#popup1')"></button>
+        </div>
+        <h4 class="title">타이틀 영역</h4>
+        <div class="popup-content">
+        
+                <section class="form-box">
+                <p class="label-txt">내용 작성</p>
+                <div class="check-group">
+                    <label class="checkbox">
+                        <input type="checkbox" />
+                        <span class="lb">체크박스 1</span>
+                    </label>
+                    <button type="button" class="btn icon-arr" aria-label="상세"></button>
+                </div>
+            </section>
+            
+            <section class="form-box">
+                <p class="label-txt">보호자님 현재 증상이 있나요?</p>
+                <label class="radio">
+                    <input type="radio" name="radio1" />
+                    <span class="lb">네. 있어요</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio1">
+                    <span class="lb">아니오. 없어요.</span>
+                </label>
+            </section>
+            <section class="form-box">
+                <p class="label-txt"> 코로나 확진을 받은 지 며칠 되었나요?</p>
+                <label class="radio">
+                    <input type="radio" name="radio2" />
+                    <span class="lb">오늘</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio2" />
+                    <span class="lb">어제</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio2" />
+                    <span class="lb">2~3일 전</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio2" />
+                    <span class="lb">4~5일 전</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio2" />
+                    <span class="lb">6일 전</span>
+                </label>
+            </section>
+
+            <section class="form-box">
+                <p class="label-txt">다른 등원자가 있나요?</p>
+                <label class="radio">
+                    <input type="radio" name="radio3" />
+                    <span class="lb">네. 있어요</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio3" />
+                    <span class="lb">아니오. 없어요.</span>
+                </label>
+            </section>
+
+            <section class="form-box">
+                <p class="label-txt">아이의 상태는 어떤가요?</p>
+                <label class="radio">
+                    <input type="radio" name="radio4" />
+                    <span class="lb">무증상</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio4" />
+                    <span class="lb">증상이 있어요</span>
+                </label>
+            </section>
+        </div>
+        <div class="btns">
+            <div class="btns-row">
+                <button type="button" class="btn normal large" onclick="closePopup('#popup1')">닫기</button>
+                <button type="button" class="btn normal large primary" onclick="closePopup('#popup1')">답변 완료</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //팝업 -->
+
+
+<!-- popup -->
+<div class="popup-frame type-dialog" id="popup2">
+    <div class="popup-wrap">
+        <div class="popup-header">
+            <button type="button" class="btn icon-close" aria-label="닫기" onclick="closePopup('#popup2')"></button>
+        </div>
+        <h4 class="title">타이틀 영역</h4>
+        <div class="popup-content">
+            
+            내용 작성
+             
+        </div>
+        <div class="btns">
+            <div class="btns-row">
+                <button type="button" class="btn normal md" onclick="closePopup('#popup2')">버튼</button>
+                <button type="button" class="btn normal md primary" onclick="closePopup('#popup2')">버튼</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //popup -->
     
 </body>
+<script>
+// 팝업닫기 openPopup('#선택자')
+function openPopup(target){
+    const popup = document.querySelector(target);
+    if (!popup) {
+        console.warn(`openPopup: ${target} 팝업을 찾을 수 없습니다`);
+        return;
+    }
+    const wrap = popup.querySelector(".popup-wrap");
+    popup.classList.add("open");
+    requestAnimationFrame(()=>{
+        wrap.classList.add("open");
+    });
+}
+
+// 팝업닫기 closePopup('#선택자')
+function closePopup(target) {
+    const popup = document.querySelector(target);
+    if (!popup) {
+        console.warn(`openPopup: ${target} 팝업을 찾을 수 없습니다`);
+        return;
+    }
+    const wrap = popup.querySelector(".popup-wrap");
+    wrap.classList.remove("open");
+    setTimeout(() => {
+        popup.classList.remove("open");
+    }, 300);
+}
+</script>
 </html>
