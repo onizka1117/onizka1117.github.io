@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theeluwin/NotoSansKR-Hestia@master/stylesheets/NotoSansKR-Hestia.css" integrity="sha384-zGzb8nSrN9lm5PPcfztVC5DjjTs5sVStV85IH8x51fM9yIwmI+Uvh3RZDJlrpPWQ" crossorigin="anonymous">
-    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/common.css?v1">
 </head>
 <body>
     
@@ -832,6 +832,7 @@ function openPopup(target){
     requestAnimationFrame(()=>{
         wrap.classList.add("open");
     });
+    document.body.style.overflow = "hidden";
 }
 
 // 팝업닫기 closePopup('#선택자')
@@ -846,6 +847,7 @@ function closePopup(target) {
     setTimeout(() => {
         popup.classList.remove("open");
     }, 300);
+    document.body.style.overflow = "";
 }
 </script>
 </html>
