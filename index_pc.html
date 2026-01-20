@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theeluwin/NotoSansKR-Hestia@master/stylesheets/NotoSansKR-Hestia.css" integrity="sha384-zGzb8nSrN9lm5PPcfztVC5DjjTs5sVStV85IH8x51fM9yIwmI+Uvh3RZDJlrpPWQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/common_pc.css">
+</head>
+<body>
+    
+<section class="wrap">
+    <!-- 사용자 입력창 -->
+    <div class="user-msg">
+        <div class="msg">
+            사용자가 질문 입력 영역
+        </div>
+        <p class="time">오전 12:00</p>
+    </div>
+    <!-- //사용자 입력창 -->
+
+    <!-- 챗봇 상태 -->
+    <div class="chatbot">
+        <div class="bot-tit">
+            <span class="bot-icon">
+                <!-- <img src="#" alt="" />-->
+            </span>
+            <i class="loding-icon">
+                <span class="dot1"></span>
+                <span class="dot2"></span>
+                <span class="dot3"></span>
+            </i>
+        </div>
+    </div>
+
+    <div class="chatbot">
+        <div class="bot-tit">
+            <span class="bot-icon">
+                <!-- <img src="#" alt="" />-->
+            </span>
+            <p class="bot-name">챗봇명</p>
+            <button type="button" class="btn icon-share" aria-label="공유하기"></button>
+        </div>
+    </div>
+
+    <div class="chatbot">
+        <div class="bot-tit">
+            <span class="bot-icon">
+                <!-- <img src="#" alt="" />-->
+            </span>
+            <p class="bot-txt">정확한 답변을 위해 분석 중이에요.</p>
+        </div>
+    </div>
+    <!-- //챗봇 상태 -->
+
+    <!-- 답변 타이틀 영역 -->
+    <div class="chatbot">
+        <div class="bot-tit">
+            <span class="bot-icon">
+                <!-- <img src="#" alt="" />-->
+            </span>
+            <p class="bot-name">챗봇명</p>
+            <button type="button" class="btn icon-share" aria-label="공유하기"></button>
+        </div>
+        <div class="msg">
+            <h4 class="title">사용자의 질문을 챗봇이 자동으로 정리해 구조화된 질문 형태로 변환한 문장 출력 영역</h4>
+            <p>답변 영역: 첫 답변은 문장이 너무 길어지지 않게 요약하여 노출(만약 더 자세히 알려달라고 할 경우에는 길이 상관x)</p>
+            <ul>
+                <li>가독성이 좋게 적당한 줄간격</li>
+                <li>불렛 활용</li>
+            </ul>
+            <p>이모지도 제한적으로 활용 <br>예시: (주의/경고:⚠️️️️️️)(불가:🚫)(알림:🔔)(중요:❗)(완료:✅️)(긴급:🚨)</p>
+            <p>최대한 1개 말풍선 안의 답변 길이는 화면 스크롤이 생기지 않을 정도</p>
+        </div>
+        <div class="msg">
+            <p>만약 스크롤이 생길 정도로  말풍선 내용이 길어지면 말픙선을 따로 분리</p>
+        </div>
+        <p class="time">오전 12:00</p>
+    </div>
+
+    <div class="chatbot">
+        <div class="bot-tit">
+            <span class="bot-icon">
+                <!-- <img src="#" alt="" />-->
+            </span>
+            <p class="bot-name">답변+기능 버튼</p>
+            <button type="button" class="btn icon-share" aria-label="공유하기"></button>
+        </div>
+        <div class="msg">
+            <p><strong>바로가기 버튼</strong>이 필요한 답변일 경우 해당 <strong style="color:#0066FF">말풍선 활용</strong></p>
+            <div class="btns-row">
+                <button type="button" class="btn normal icon link">버튼명</button>
+            </div>
+            <div class="btns-row">
+                <button type="button" class="btn normal icon link">버튼명</button>
+            </div>
+            <div class="btns-row">
+                <button type="button" class="btn normal icon link">버튼명1</button>
+                <button type="button" class="btn normal icon down">버튼명2</button>
+            </div>
+        </div>
+        <p class="time">오전 12:00</p>
+    </div>
+    <!-- //답변 타이틀 영역 -->
+
+    <!-- 답변 불가-->
+    <div class="chatbot">
+        <div class="bot-tit">
+            <span class="bot-icon">
+                <!-- <img src="#" alt="" />-->
+            </span>
+            <p class="bot-name">챗봇명</p>
+            <button type="button" class="btn icon-share" aria-label="공유하기"></button>
+        </div>
+        <div class="msg">
+            <div class="error-icon"></div>
+            <p>죄송합니다.<br>감염병 관련 질문에만 도움을 드릴 수 있어요. </p>
+        </div>
+        <div class="msg">
+            <div class="error-icon"></div>
+            <p>서비스 처리 중 오류가 발생했습니다<br>다시 질문해주시겠어요?</p>
+        </div>
+        <div class="msg">
+            <div class="error-icon"></div>
+            <p>죄송합니다.<br>이 질문에 대한 정보를 찾을 수 없습니다.</p>
+        </div>
+        <div class="msg">
+            <p>질병관리본부 건강상담을 이용해보세요</p>
+            <div class="btns-row">
+                <button type="button" class="btn normal icon error">1339 콜센터</button>
+            </div>
+            <div class="btns-row">
+                <button type="button" class="btn normal icon error">국가정보건강포털 바로가기</button>
+            </div>
+        </div>
+        <p class="time">오전 12:00</p>
+    </div>
+    <!-- //답변 불가-->
+
+    <!-- 부가 정보 영역 -->
+    <div class="chatbot">
+        <div class="bot-tit">
+            <span class="bot-icon">
+                <!-- <img src="#" alt="" />-->
+            </span>
+            <p class="bot-name">챗봇명</p>
+            <button type="button" class="btn icon-share" aria-label="공유하기"></button>
+        </div>
+        <div class="msg">
+            <h4 class="title">2025년 결핵 관리 지침에서 개정된 내용입니다. </h4>
+            <p>결핵을 ‘폐결핵’만이 아니라 약제내성, 비폐결핵, 잠복결핵까지 포함한 맞춤형 통합관리체계로 확대했습니다.</p>
+            <p>진단·검사 기준이 구체화되고, 잠복결핵·인수공통결핵 감시, 약제 수급 관리, 치료 후 평가까지 포함하는 전주기 관리가 강조됩니다.</p>
+            <div class="msg-alert">
+                <i class="info"></i>
+                <p>본 답변은 지침의 핵심을 요약한 것으로, 세부기준 및 예외사항은 지침 원문에서 반드시 확인해주세요.</p>
+            </div>
+        </div>
+        <div class="msg">
+            <div class="msg-alert">
+                <i class="info"></i>
+                <p>이 정보는 일반적인 안내입니다. 개인 건강 상태에 따라 전문가 상담을 권장드립니다.</p>
+            </div>
+        </div>
+        <div class="msg">
+            <h4 class="title">2025년 결핵 관리 지침에서 개정된 내용입니다. </h4>
+            <p>결핵을 ‘폐결핵’만이 아니라 약제내성, 비폐결핵, 잠복결핵까지 포함한 맞춤형 통합관리체계로 확대했습니다.</p>
+            <p>진단·검사 기준이 구체화되고, 잠복결핵·인수공통결핵 감시, 약제 수급 관리, 치료 후 평가까지 포함하는 전주기 관리가 강조됩니다.</p>
+            <div class="msg-alert">
+                <ul>
+                    <li>담당 부서: 감염병정책과</li>
+                    <li>작성일: 2025년 11월 19일</li>
+                </ul>
+            </div>
+        </div>
+        <div class="msg">
+            <div class="msg-alert">
+                <ul>
+                    <li>출처: 질병관리청 감염병포털 FAQ</li>
+                </ul>
+            </div>
+        </div>
+        <div class="msg">
+            <h4 class="title">결핵 주요 증상</h4>
+            <p>결핵을 ‘폐결핵’만이 아니라 약제내성, 비폐결핵, 잠복결핵까지 포함한 맞춤형 통합관리체계로 확대했습니다.</p>
+            <p>진단·검사 기준이 구체화되고, 잠복결핵·인수공통결핵 감시, 약제 수급 관리, 치료 후 평가까지 포함하는 전주기 관리가 강조됩니다.</p>
+            <div class="msg-alert type-danger flex">
+                <i class="danger"></i>
+                <p>2주 이상 기침 시 결핵검진을 권장드립니다. </p>
+            </div>
+            <div class="btns-row">
+                <button type="button" class="btn normal icon error">가까운 의료기관 찾기</button>
+            </div>
+        </div>
+        <p class="time">오전 12:00</p>
+    </div>
+    <!-- //부가 정보 영역 -->
+
+    <!-- 콘텐츠 확장 옵션 -->
+    <div class="chatbot">
+        <div class="bot-tit">
+            <span class="bot-icon">
+                <!-- <img src="#" alt="" />-->
+            </span>
+            <p class="bot-name">챗봇명</p>
+            <button type="button" class="btn icon-share" aria-label="공유하기"></button>
+        </div>
+        <div class="msg">
+            <p>질병관리본부 건강상담을 이용해보세요</p>
+            <div class="btns-row">
+                <button type="button" class="btn normal icon error">1339 콜센터</button>
+            </div>
+            <div class="btns-row">
+                <button type="button" class="btn normal icon error">국가정보건강포털 바로가기</button>
+            </div>
+        </div>
+        
+        <div class="card-wrap">
+            <div class="inner">
+                <dl class="card-item">
+                    <dt>
+                        <img src="img/img-blank.png" alt="">
+                    </dt>
+                    <dd>
+                        <div class="ellipsis-3">
+                            타이틀 영역 최대3 줄 노출/이후 말줄임표 타이틀 영역 최대3 줄 노출/이후 말줄타이틀 영역 최대3 줄 노출/이후 말줄임표 타이틀 영역 최대3 줄 노출/이후 말줄
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="card-item">
+                    <dt>
+                        <img src="img/img-blank.png" alt="">
+                    </dt>
+                    <dd>
+                        <div class="ellipsis-3">
+                            타이틀 영역 최대3 줄 노출/이후 말줄임표 타이틀 영역 최대3 줄 노출/이후 말줄타이틀 영역 최대3 줄 노출/이후 말줄임표 타이틀 영역 최대3 줄 노출/이후 말줄
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="card-item">
+                    <dt>
+                        <img src="img/img-blank.png" alt="">
+                    </dt>
+                    <dd>
+                        <div class="ellipsis-3">
+                            타이틀 영역 최대3 줄 노출/이후 말줄임표 
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="img-wrap">
+            <img src="img/img-blank2.png" alt="">
+            <button type="button" aria-label="크게보기" class="btn icon-zoom"></button>
+            <button type="button" aria-label="저장" class="btn icon-down"></button>
+        </div>
+
+        <div class="video-wrap">
+           <div class="thumbnail">
+                <img src="img/thumbnail.png" alt="">
+           </div>
+           <div class="txt">
+            <div class="ellipsis-2">
+                동영상 타이틀 영역으로 최대 2줄 노출/더 길어질 경우 말줄임표동영상 타이틀 영역으로 최대 2줄 노출/더 길어질 경우 말줄임표
+            </div>
+           </div>
+        </div>
+        
+        <div class="msg">
+            <h4 class="title">증상 비교 분석</h4>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>코로나</th>
+                            <th>독감</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>증상</td>
+                            <td>⭕</td>
+                            <td>❌</td>
+                        </tr>
+                        <tr>
+                            <td>발열</td>
+                            <td>⭕</td>
+                            <td>❌</td>
+                        </tr>
+                        <tr>
+                            <td>기침</td>
+                            <td>⭕</td>
+                            <td>❌</td>
+                        </tr>
+                        <tr>
+                            <td>근육통</td>
+                            <td>⭕</td>
+                            <td>❌</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="msg">
+            <h4 class="title">개정 전후 비교</h4>
+            <div class="table-wrap">
+                <table>
+                    <colgroup>
+                    <col style="width:100px" />
+                    <col style="width:200px" />
+                    <col style="width:200px" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>개정 전</th>
+                            <th>개정 후</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>적용 형태</th>
+                            <td>법적 격리 의무</td>
+                            <td>자율적 격리 권고</td>
+                        </tr>
+                        <tr>
+                            <th>격리 기간</th>
+                            <td>7일</td>
+                            <td>해열 후 24시간 등 외출 자제 권고</td>
+                        </tr>
+                        <tr>
+                            <th>위반 시 처벌</th>
+                            <td>있음(과태료·벌금·형사처벌)</td>
+                            <td>없음</td>
+                        </tr>
+                        <tr>
+                            <th>정부 지원</th>
+                            <td>생활지원비, 격리 통지서</td>
+                            <td>지원 없음</td>
+                        </tr>
+                        <tr>
+                            <th>외출 가능 여부</th>
+                            <td>외출 금지</td>
+                            <td>외출 가능하나 자제 권고</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="msg">
+            <p>가장 가까운 보건소를 찾아보았어요</p>
+        </div>
+        <div class="msg">
+            <div class="map">
+                <!-- 지도 영역 -->
+                <img src="img/map.png" alt="">
+                <!-- //지도 영역 -->
+            </div>
+            <dl class="map-info">
+                <dt>강남구 보건소</dt>
+                <dd>1.7km 운영중</dd>
+                <dd>월~금: AM 9:00 ~ PM 6:00, 주말 휴무</dd>
+                <dd>02-3423-7200</dd>
+                <dd class="btns">
+                    <button type="button" class="btn icon-circle-link" aria-label="상세보기"></button>
+                    <button type="button" class="btn icon-circle-call" aria-label="전화하기"></button>
+                </dd>
+            </dl>
+        </div>
+
+
+        <div class="msg">
+            <p>현재 위치 근처에 있는 보건소 5곳을 안내드립니다.</p>
+        </div>
+         <div class="msg">
+            <div class="map">
+                <!-- 지도 영역 -->
+                <img src="img/map.png" alt="">
+                <!-- //지도 영역 -->
+                <button type="button" aria-label="크게보기" class="btn icon-zoom"></button>
+            </div>
+            <dl class="map-info">
+                <dt>강남구 보건소</dt>
+                <dd>1.7km 운영중</dd>
+                <dd>월~금: AM 9:00 ~ PM 6:00, 주말 휴무</dd>
+                <dd>02-3423-7200</dd>
+                <dd class="btns">
+                    <button type="button" class="btn icon-circle-link" aria-label="상세보기"></button>
+                    <button type="button" class="btn icon-circle-call" aria-label="전화하기"></button>
+                </dd>
+            </dl>
+        </div>
+
+        <div class="map-wrap">
+            <div class="inner">
+                <dl class="map-info">
+                    <dt>강남구 보건소</dt>
+                    <dd>1.7km 운영중</dd>
+                    <dd class="open-hours">월~금: AM 9:00 ~ PM 6:00, 주말 휴무</dd>
+                    <dd>02-3423-7200</dd>
+                    <dd class="btns">
+                        <button type="button" class="btn icon-circle-link" aria-label="상세보기"></button>
+                        <button type="button" class="btn icon-circle-call" aria-label="전화하기"></button>
+                    </dd>
+                </dl>
+                <dl class="map-info">
+                    <dt>강남구 보건소</dt>
+                    <dd>1.7km 운영중</dd>
+                    <dd class="open-hours">월~금: AM 9:00 ~ PM 6:00, 주말 휴무</dd>
+                    <dd>02-3423-7200</dd>
+                    <dd class="btns">
+                        <button type="button" class="btn icon-circle-link" aria-label="상세보기"></button>
+                        <button type="button" class="btn icon-circle-call" aria-label="전화하기"></button>
+                    </dd>
+                </dl>
+                <dl class="map-info">
+                    <dt>강남구 보건소</dt>
+                    <dd>1.7km 운영중</dd>
+                    <dd class="open-hours">월~금: AM 9:00 ~ PM 6:00, 주말 휴무</dd>
+                    <dd>02-3423-7200</dd>
+                    <dd class="btns">
+                        <button type="button" class="btn icon-circle-link" aria-label="상세보기"></button>
+                        <button type="button" class="btn icon-circle-call" aria-label="전화하기"></button>
+                    </dd>
+                </dl>
+                <dl class="map-info">
+                    <dt>서초보건소 보건소</dt>
+                    <dd>1.7km 운영중</dd>
+                    <dd class="open-hours">월~금: AM 9:00 ~ PM 6:00, 주말 휴무</dd>
+                    <dd>02-3423-7200</dd>
+                    <dd class="btns">
+                        <button type="button" class="btn icon-circle-link" aria-label="상세보기"></button>
+                        <button type="button" class="btn icon-circle-call" aria-label="전화하기"></button>
+                    </dd>
+                </dl>
+                <dl class="map-info">
+                    <dt>강남구 보건소</dt>
+                    <dd>1.7km 운영중</dd>
+                    <dd class="open-hours">월~금: AM 9:00 ~ PM 12:00,<br> PM 1:00~6:00, 주말 휴무</dd>
+                    <dd>02-3423-7200</dd>
+                    <dd class="btns">
+                        <button type="button" class="btn icon-circle-link" aria-label="상세보기"></button>
+                        <button type="button" class="btn icon-circle-call" aria-label="전화하기"></button>
+                    </dd>
+                </dl>
+                <dl class="map-info">
+                    <dt>강남구 보건소</dt>
+                    <dd>1.7km 운영중</dd>
+                    <dd class="open-hours">월~금: AM 9:00 ~ PM 6:00, 주말 휴무</dd>
+                    <dd>02-3423-7200</dd>
+                    <dd class="btns">
+                        <button type="button" class="btn icon-circle-link" aria-label="상세보기"></button>
+                        <button type="button" class="btn icon-circle-call" aria-label="전화하기"></button>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="msg">
+            <a href="#" target="_blank" class="link-box">
+                <div class="ellipsis-3">감염병 공동대응 협력 강화를 위한 「다부처 감염병 치료제 R&D 성과교류 심포지엄」 개최</div>
+                <small>신종바이러스·매개체연구과</small>
+                <small>2025년 11월 21일 </small>
+            </a>
+            <a href="#" target="_blank" class="link-box">
+                <div class="ellipsis-3">감염병 공동대응 협력 강화를 위한 「다부처 감염병 치료제 R&D 성과교류 심포지엄」 개최</div>
+                <small>출처 또는 담당부서명 [표기 영역]</small>
+                <small>yyyy년 mm월 dd일 [작성일 영역]</small>
+            </a>  
+            <a href="#" target="_blank" class="link-box">
+                <div class="ellipsis-3">타이틀 영역</div>
+                <small>출처 또는 담당부서명</small>
+                <small>yyyy년 mm월 dd일</small>
+            </a>  
+        </div>
+
+        <div class="file-list">
+            <div class="inner">
+                <dl class="file-box">
+                    <dt>감염병 신고를 위한 진단기준 고시</dt>
+                    <dd class="txt">[시행 2025. 9. 8.] [질병관리청고시 제2025-11호, 2025. 9. 8., 일부개정</dd>
+                    <dd>
+                        <div class="btns-row">
+                            <button type="button" class="btn normal icon link">바로보기</button>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="file-box">
+                    <dt>2025년 법정감염병 진단·신고기준 지침. pdf</dt>
+                    <dd class="txt">[2025.9월 개정]</dd>
+                    <dd>
+                        <div class="btns-row">
+                            <button type="button" class="btn normal icon link">바로보기</button>
+                            <button type="button" class="btn normal icon down">다운로드</button>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="msg">
+            <h4 class="title">코로나 ARI 입원환자 현황 {그래프 타이틀영역}</h4>
+            <div class="sub-title">집계 일자, 단위 등{부가 정보 영역}</div>
+            
+            
+            <div class="relative-box">
+                <button type="button" aria-label="출처이동" class="btn icon-link"></button>
+                <div class="chart">
+                    <div class="chart-wrap">
+                        <div class="chart-board">
+                            <div><em>500</em></div>
+                            <div><em>400</em></div>
+                            <div><em>300</em></div>
+                            <div><em>200</em></div>
+                            <div><em>100</em><em class="first">0</em></div>
+                        </div>
+                        <div class="chart-bar">
+                            <div>
+                                <em>39</em>
+                                <div class="bar" style="height:90%;">
+                                    <span>414</span>
+                                </div>
+                            </div>
+                            <div>
+                                <em>40</em>
+                                <div class="bar">
+                                    <span>321</span>
+                                </div>
+                            </div>
+                            <div>
+                                <em>41</em>
+                                <div class="bar" style="height:50%;">
+                                    <span>219</span>
+                                </div>
+                            </div>
+                            <div>
+                                <em>42</em>
+                                <div class="bar" style="height:40%;">
+                                    <span>197</span>
+                                </div>
+                            </div>
+                            <div>
+                                <em>43</em>
+                                <div class="bar" style="height:35%;">
+                                    <span>177</span>
+                                </div>
+                            </div>
+                            <div>
+                                <em>44</em>
+                                <div class="bar" style="height:38%;">
+                                    <span>201</span>
+                                </div>
+                            </div>
+                            <div>
+                                <em>45</em>
+                                <div class="bar" style="height:30%;">
+                                    <span>153</span>
+                                </div>
+                            </div>
+                            <div>
+                                <em>46</em>
+                                <div class="bar" style="height:28%;">
+                                    <span>145</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="reference">
+                <strong class="tit">출처</strong>
+                <ul>
+                    <li>감염병 포털_코로나 19 최근 발생 현황</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="msg">
+            <p>주의/알림 박스</p>
+            <div class="alert-box">
+                <span class="badge-alert">라벨</span>
+                <p>인플루엔자 유행주의보</p>
+                <small>전국대상</small>
+                <small>2025년 11월 21일 발령</small>
+            </div>
+             <div class="alert-box type-yellow">
+                <span class="badge-alert">상태</span>
+                <p>알람 타이틀 영역으로 텍스트는 말줄임없이 모두 출력</p>
+                <small>발령/범위 또는 출처(담당부서명)</small>
+                <small>발령일/작성일:yyyy년 mm월 dd일~12월 31일</small>
+            </div>
+        </div>
+        
+        <!-- 출처 -->
+        <div class="msg">
+            <h4 class="title">2025년 결핵 관리 지침에서 개정된 내용입니다. </h4>
+            <p>결핵을 ‘폐결핵’만이 아니라 약제내성, 비폐결핵, 잠복결핵까지 포함한 맞춤형 통합관리체계로 확대했습니다.</p>
+            <p>진단·검사 기준이 구체화되고, 잠복결핵·인수공통결핵 감시, 약제 수급 관리, 치료 후 평가까지 포함하는 전주기 관리가 강조됩니다.</p>
+            <ul class="list-ref">
+                <li>담당 부서: 감염병정책과 </li>
+                <li>작성일: 2025년 11월 19일</li>
+            </ul>
+        </div>
+
+        <div class="msg">
+            <p class="fw-500">출처</p>
+            <a href="#" target="_blank" class="ref-link-box">
+                국가건강정보포털: 수족구병
+            </a>
+            <a href="#" target="_blank" class="ref-link-box">
+                질병관리청 해외감염병 NOW
+            </a>
+        </div>
+
+        <div class="msg">
+            <p class="fw-500">출처</p>
+            <a href="#" target="_blank" class="ref-link-box">
+                인플루엔자 국가예방접종 9월 22일부터 시작 예정(8.25.월)
+                <span class="date">
+                    <em>2025년 8월 25일</em>
+                    예방접종관리과
+                </span>
+            </a>
+        </div>
+
+        <div class="msg">
+            <p class="fw-500">출처</p>
+            <div class="ref-list">
+                <div class="ref-item">
+                    <p>2025 시스템이용설명서(보건소용)_최종(전자용).pdf</p>
+                    <div class="sub">[2025.9월 개정]</div>
+                    <div class="btns-row">
+                        <button type="button" class="btn normal icon link">바로보기</button>
+                        <button type="button" class="btn normal icon down">다운로드</button>
+                    </div>
+                </div>
+                <div class="ref-item">
+                    <p>감염병 신고를 위한 진단기준 고시</p>
+                    <div class="sub">[시행 2025. 9. 8.] [질병관리청고시 제2025-11호, 2025. 9. 8., 일부개정]</div>
+                    <div class="btns-row">
+                        <button type="button" class="btn normal icon link">바로보기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //출처 -->
+
+        <div class="keyword-wrap">
+            <button type="button" class="btn keyword">추천 검색어1</button>
+            <button type="button" class="btn keyword">인플루엔자 주간 발생 동향</button>
+            <button type="button" class="btn keyword">FAQ</button>
+            <button type="button" class="btn keyword">HIV 신고</button>
+        </div>
+
+        <div class="msg">
+            <h4 class="title">강남구에서 잡종가능한 기관입니다.</h4>
+            <div class="badge-list">
+                <button type="button" class="badge">인플루엔자</button>
+                <button type="button" class="badge">서울 강남구</button>
+                <button type="button" class="badge">여성</button>
+                <button type="button" class="badge">35세</button>
+            </div>
+            <div class="badge-list">
+                <span class="badge-state type-red">심각</span>
+                <span class="badge-state type-yellow">경계</span>
+                <span class="badge-state type-green">정상</span>
+                <span class="badge-state type-brown">경고</span>
+                <span class="badge-state">일반</span>
+            </div>
+            <div class="badge-list">
+                <span class="tag">
+                    텍스트
+                    <button type="button" aria-label="삭제" class="del"></button>
+                </span>
+                <span class="tag">
+                    텍스트1
+                    <button type="button" aria-label="삭제" class="del"></button>
+                </span>
+            </div>
+        </div>
+        
+        <div class="msg">
+            <p>팝업입니다.</p>
+            <div class="btns-row">
+                <button type="button" class="btn normal" onclick="openPopup('#popup1')">팝업1</button>
+                <button type="button" class="btn normal" onclick="openPopup('#popup2')">팝업2</button>
+            </div>
+        </div>
+
+        <p class="time">오전 12:00</p>
+    </div>
+    <!-- //콘텐츠 확장 옵션 -->
+</section>
+
+<div class="send-box">
+    <div class="send-group">
+        <input type="text" placeholder="챗봇에게 물어보세요!" />
+        <button type="button" class="btn icon-send" aria-label="보내기"></button>
+    </div>
+</div>
+
+
+
+<!-- 팝업 -->
+<div class="popup-frame" id="popup1">
+    <div class="popup-wrap">
+        <div class="popup-header">
+            <button type="button" class="btn icon-close" aria-label="닫기" onclick="closePopup('#popup1')"></button>
+        </div>
+        <h4 class="title">타이틀 영역</h4>
+        <div class="popup-content">
+        
+                <section class="form-box">
+                <p class="label-txt">내용 작성</p>
+                <div class="check-group">
+                    <label class="checkbox">
+                        <input type="checkbox" />
+                        <span class="lb">체크박스 1</span>
+                    </label>
+                    <button type="button" class="btn icon-arr" aria-label="상세"></button>
+                </div>
+            </section>
+            
+            <section class="form-box">
+                <p class="label-txt">보호자님 현재 증상이 있나요?</p>
+                <label class="radio">
+                    <input type="radio" name="radio1" />
+                    <span class="lb">네. 있어요</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio1">
+                    <span class="lb">아니오. 없어요.</span>
+                </label>
+            </section>
+            <section class="form-box">
+                <p class="label-txt"> 코로나 확진을 받은 지 며칠 되었나요?</p>
+                <label class="radio">
+                    <input type="radio" name="radio2" />
+                    <span class="lb">오늘</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio2" />
+                    <span class="lb">어제</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio2" />
+                    <span class="lb">2~3일 전</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio2" />
+                    <span class="lb">4~5일 전</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio2" />
+                    <span class="lb">6일 전</span>
+                </label>
+            </section>
+
+            <section class="form-box">
+                <p class="label-txt">다른 등원자가 있나요?</p>
+                <label class="radio">
+                    <input type="radio" name="radio3" />
+                    <span class="lb">네. 있어요</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio3" />
+                    <span class="lb">아니오. 없어요.</span>
+                </label>
+            </section>
+
+            <section class="form-box">
+                <p class="label-txt">아이의 상태는 어떤가요?</p>
+                <label class="radio">
+                    <input type="radio" name="radio4" />
+                    <span class="lb">무증상</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio4" />
+                    <span class="lb">증상이 있어요</span>
+                </label>
+            </section>
+        </div>
+        <div class="btns">
+            <div class="btns-row">
+                <button type="button" class="btn normal large" onclick="closePopup('#popup1')">닫기</button>
+                <button type="button" class="btn normal large primary" onclick="closePopup('#popup1')">답변 완료</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //팝업 -->
+
+
+<!-- popup -->
+<div class="popup-frame type-dialog" id="popup2">
+    <div class="popup-wrap">
+        <div class="popup-header">
+            <button type="button" class="btn icon-close" aria-label="닫기" onclick="closePopup('#popup2')"></button>
+        </div>
+        <h4 class="title">타이틀 영역</h4>
+        <div class="popup-content">
+            
+            내용 작성
+             
+        </div>
+        <div class="btns">
+            <div class="btns-row">
+                <button type="button" class="btn normal md" onclick="closePopup('#popup2')">버튼</button>
+                <button type="button" class="btn normal md primary" onclick="closePopup('#popup2')">버튼</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //popup -->
+    
+</body>
+<script>
+// 팝업닫기 openPopup('#선택자')
+function openPopup(target){
+    const popup = document.querySelector(target);
+    if (!popup) {
+        console.warn(`openPopup: ${target} 팝업을 찾을 수 없습니다`);
+        return;
+    }
+    const wrap = popup.querySelector(".popup-wrap");
+    popup.classList.add("open");
+    requestAnimationFrame(()=>{
+        wrap.classList.add("open");
+    });
+    document.body.style.overflow = "hidden";
+}
+
+// 팝업닫기 closePopup('#선택자')
+function closePopup(target) {
+    const popup = document.querySelector(target);
+    if (!popup) {
+        console.warn(`openPopup: ${target} 팝업을 찾을 수 없습니다`);
+        return;
+    }
+    const wrap = popup.querySelector(".popup-wrap");
+    wrap.classList.remove("open");
+    setTimeout(() => {
+        popup.classList.remove("open");
+    }, 300);
+    document.body.style.overflow = "";
+}
+</script>
+</html>
